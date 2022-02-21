@@ -15,6 +15,7 @@ int main()
   cout << fixed << setprecision(15);
   test(testData, 3, terms, 4);
   cout << endl;
+  cout << "Question 4 test" << endl;
   int q4Terms[6] = {7, 8, 9, 10, 11, 12};
   test(testData, 3, q4Terms, 6);
   cout << endl;
