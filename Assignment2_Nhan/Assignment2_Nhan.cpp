@@ -4,7 +4,7 @@
 using namespace std;
 
 unsigned long long int factorial(int num);
-double maclaurinSin(double x, int N); // x is in radian, N is number of iteration
+long double maclaurinSin(double x, int N); // x is in radian, N is number of iteration
 void test(double data[], int dataSize, int terms[], int termsSize);
 
 int main()
@@ -12,7 +12,7 @@ int main()
   double testData[3] = {M_PI / 3, M_PI_4, M_PI / 6};
   int terms[4] = {3, 6, 9, 12};
   cout << "Question 3 test" << endl;
-  cout << fixed << setprecision(15);
+  cout << fixed << setprecision(20);
   test(testData, 3, terms, 4);
   cout << endl;
   cout << "Question 4 test" << endl;
@@ -31,9 +31,9 @@ unsigned long long int factorial(int num)
   return factorial;
 }
 
-double maclaurinSin(double x, int N)
+long double maclaurinSin(double x, int N)
 {
-  double res = 0;
+  long double res = 0;
   for (int i = 0; i < N; i++)
   {
     res += pow(-1, i) * pow(x, 2 * i + 1) / factorial(2 * i + 1);
