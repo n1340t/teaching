@@ -15,8 +15,15 @@ int main()
   string fileName = "input.txt";
   string fName[N], lName[N];
   float g1[N], g2[N], g3[N], GTotal[N], GATotal[N];
+  // Q1
   importData(fileName, fName, lName, g1, g2, g3);
+  // Q2  
+  DisplayData(fName, lName, g1, g2, g3);
+  // Q3
   finalGrade(fName, lName, g1, g2, g3, GTotal);
+  // Q4
+  adjustFinalGrade(fName, lName, g1, g2, g3);
+  // Q5
   report(fName, lName, g1, g2, g3, GTotal);
   return 0;
 }
@@ -185,5 +192,22 @@ void report(string fName[], string lName[], float g1[], float g2[], float g3[], 
   for(int i = 0; i < N; i++) {
     classAvg += GTotal[i];
   }
-  cout << "Class Average is " << fixed << setprecision(1) << classAvg / N;
+  classAvg = classAvg / (N*3);
+  int aboveAvg = 0;
+  int belowAvg = 0;
+  int topStu = 0;
+  for(int i = 0; i < N; i++) {
+    if (GTotal[i] >= topStu) {
+      topStu = i;
+    }
+    if (GTotal[i]/3 >= classAvg) {
+      aboveAvg++;
+    } else {
+      belowAvg++;
+    }
+  }
+  cout << "Class Average is " << fixed << setprecision(1) << classAvg << endl;
+  cout << "There are " << aboveAvg << " students above average" << endl;
+  cout << "There are " << belowAvg << " students below average" << endl;
+  cout << "Top scorer is " << fName[topStu] << " " << lName[topStu] << " G1: " << g1[topStu] << ", G2: " << g2[topStu] << ", G3: " << g3[topStu]; 
 }
