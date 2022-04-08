@@ -1,0 +1,8 @@
+Oscar Blanc 5.3 7.2 3.5
+George Merc 1.2 8.3 6.7
+Linda Hamilton 8.5 6.9 9.3
+Hampreet Goyal 7.6 9.5 9
+Muskan Arora 5.0 5.0 5.3
+Xiu Cai 8.6 4.3 7.6
+Liu Kang 1.2 3.6 4.8
+Pierre Dupont 9.6 9.5 9.4
